@@ -13,16 +13,6 @@ if(isset($_POST['submit']))
   $finaldata = $finaldata["rows"][0]["elements"][0]["duration"]["text"];
   $rest = substr($finaldata, 0,-5);
   $rest=(int)$rest;
-
-
-
-  // $file = fopen("test.txt", "w+") or die("file not open");
-  // $s = $home." \r\n".$destination;
-  // fputs  ($file,$s) or die("Data did not write");
-  // fclose($file);
-
-  //shell_exec("C:/xampp/htdocs/demo/run.py");
-
 }
 ?>
 
