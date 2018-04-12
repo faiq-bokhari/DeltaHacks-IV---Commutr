@@ -6,8 +6,9 @@ if(isset($_POST['submit']))
   $home = str_replace(" ", "%20", $home);
   $destination = $_POST['destination'];
   $destination = str_replace(" ", "%20", $destination);
+  key = ''
 
-  $url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&key=AIzaSyC7ZCMYbXM7VEDeJFXsy57MEB7buQxOhso&origins=".$home."&destinations=".$destination;
+  $url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial" + key+ "&origins=".$home."&destinations=".$destination;
   $data = file_get_contents($url);
   $finaldata = json_decode($data, true);
   $finaldata = $finaldata["rows"][0]["elements"][0]["duration"]["text"];
